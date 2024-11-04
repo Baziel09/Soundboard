@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 flex items-center justify-center">
+    <div class="bg-white p-8 mt-5 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold mb-6">Soundboard</h1>
+        <div class="grid grid-cols-4 gap-4">
+            <button class="bg-blue-500 text-white p-4 rounded hover:bg-blue-600">
+                <audio id="sound1" src="mixkit-terror-transition-2484.wav" preload="auto"></audio>
+                <label for="sound1" class="cursor-pointer">terror</label>
+            </button>
+            <button class="bg-green-500 text-white p-4 rounded hover:bg-green-600">
+                <audio id="sound2" src="path/to/sound2.mp3" preload="auto"></audio>
+                <label for="sound2" class="cursor-pointer">Sound 2</label>
+            </button>
+            <button class="bg-red-500 text-white p-4 rounded hover:bg-red-600">
+                <audio id="sound3" src="path/to/sound3.mp3" preload="auto"></audio>
+                <label for="sound3" class="cursor-pointer">Sound 3</label>
+            </button>
+            <button class="bg-yellow-500 text-white p-4 rounded hover:bg-yellow-600">
+                <audio id="sound4" src="path/to/sound4.mp3" preload="auto"></audio>
+                <label for="sound4" class="cursor-pointer">Sound 4</label>
+            </button>
+            <button class="bg-purple-500 text-white p-4 rounded hover:bg-purple-600">
+                <audio id="sound5" src="path/to/sound5.mp3" preload="auto"></audio>
+                <label for="sound5" class="cursor-pointer">Sound 5</label>
+            </button>
+            <button class="bg-orange-500 text-white p-4 rounded hover:bg-orange-600">
+                <audio id="sound6" src="path/to/sound6.mp3" preload="auto"></audio>
+                <label for="sound6" class="cursor-pointer">Sound 6</label>
+            </button>
+            <button class="bg-pink-500 text-white p-4 rounded hover:bg-pink-600">
+                <audio id="sound7" src="path/to/sound7.mp3" preload="auto"></audio>
+                <label for="sound7" class="cursor-pointer">Sound 7</label>
+            </button>
+            <button class="bg-indigo-500 text-white p-4 rounded hover:bg-indigo-600">
+                <audio id="sound8" src="path/to/sound8.mp3" preload="auto"></audio>
+                <label for="sound8" class="cursor-pointer">Sound 8</label>
+            </button>
+            <button class="bg-brown-500 text-white p-4 rounded hover:bg-brown-600">
+                <audio id="sound10" src="10" preload="auto"></audio>
+                <label for="sound10" class="cursor-pointer">Sound 10</label>
+            </button>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('button').forEach(button => {
+            const audio = button.querySelector('audio');
+            button.onclick = () => {
+                audio.currentTime = 0; // Zet de tijd op 0
+                audio.play(); // Speel het geluid af
+            };
+        });
+    </script>
+</body>
+</html>
